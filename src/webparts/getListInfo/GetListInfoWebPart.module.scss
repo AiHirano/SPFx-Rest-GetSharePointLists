@@ -1,0 +1,83 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.getListInfo {
+  .container {
+    max-width: 700px;
+    margin: 0px auto;
+  }
+
+  .row {
+    @include ms-Grid-row;
+    @include ms-fontColor-white;
+    background-color: $ms-color-themeDark;
+    padding: 20px;
+  }
+
+  .column {
+    @include ms-Grid-col;
+    @include ms-lg10;
+    @include ms-xl8;
+    @include ms-xlPush2;
+    @include ms-lgPush1;
+  }
+
+  .title {
+    @include ms-font-xxl;
+    @include ms-fontColor-white;
+  }
+
+  .subTitle {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .description {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .list{
+    /***変数***/
+  $color:#333;
+  $font-family:YuGothic, 'Meiryo UI', Meiryo, 'MS Pgothic', Osaka, 'Segoe UI', Tahoma, Arial, sans-serif;
+  $font-weight:normal;
+  $box-sizing:border-box;
+
+    color:$color;
+    font-family: $font-family;
+    font-weight: $font-weight;
+    box-sizing: $box-sizing;
+    background-color: rgba(242,246,237,0.74);
+    @include ms-font-l;/*フォントサイズ*/
+    margin:5;
+    padding:10;
+    list-style-type:none;
+    .listItem{
+      color: $color;
+      font-family: $font-family;
+      font-weight: $font-weight;
+      box-sizing: $box-sizing;
+      margin:0;
+      box-shadow:none;
+      padding:5px 10px;
+      position: relative;
+      a{
+        text-decoration: none;
+        cursor: pointer;
+        color:$ms-color-themeDark;
+        :hover{
+            color: $ms-color-themePrimary;
+        }
+        h1{
+          @include ms-font-xl;
+          font-weight: bold;
+        }
+      }
+
+      .created{
+        @include ms-font-s;
+      }
+    }
+  }
+}
+
